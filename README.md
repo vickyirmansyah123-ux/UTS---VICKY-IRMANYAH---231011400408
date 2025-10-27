@@ -1,8 +1,4 @@
-Baik bos 👇 berikut penjelasan ringkas dan jelas dari **modul "Operasi Morfologi pada Citra Biner"** (pekan 5) yang ada di file PDF:
-
----
-
-### 🧠 **1. Pengantar Operasi Morfologi**
+###  **1. Pengantar Operasi Morfologi**
 
 Operasi morfologi adalah **teknik pengolahan citra digital** yang berfokus pada **bentuk dan struktur objek** di dalam citra, khususnya **citra biner** (hitam–putih).
 Operasi ini menggunakan **structuring element (SE)** sebagai alat untuk memeriksa dan memodifikasi pixel berdasarkan **hubungan spasial**.
@@ -17,7 +13,7 @@ Operasi ini menggunakan **structuring element (SE)** sebagai alat untuk memeriks
 
 ---
 
-### 🧩 **2. Citra Biner dan Structuring Element**
+###  **2. Citra Biner dan Structuring Element**
 
 * **Citra biner** hanya memiliki 2 nilai:
   `0 = hitam (background)` dan `255 = putih (foreground)`.
@@ -31,7 +27,7 @@ Operasi ini menggunakan **structuring element (SE)** sebagai alat untuk memeriks
   * **Elliptical (elips)**
   * **Cross (salib)**
 
-📘 Contoh kode:
+Contoh kode:
 
 ```python
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3,3))
@@ -39,7 +35,7 @@ kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3,3))
 
 ---
 
-### ⚙️ **3. Operasi Morfologi Dasar**
+###  **3. Operasi Morfologi Dasar**
 
 #### a. **Erosion (Erosi)**
 
@@ -89,7 +85,7 @@ closing = cv2.morphologyEx(image_binary, cv2.MORPH_CLOSE, kernel)
 
 ---
 
-### 🧮 **4. Operasi Morfologi Turunan**
+###  **4. Operasi Morfologi Turunan**
 
 #### a. **Morphological Gradient**
 
@@ -123,7 +119,7 @@ blackhat = cv2.morphologyEx(image_binary, cv2.MORPH_BLACKHAT, kernel)
 
 ---
 
-### 🧪 **5. Aplikasi Praktis**
+###  **5. Aplikasi Praktis**
 
 * **Noise Removal:** Gunakan kombinasi Opening + Closing untuk membersihkan hasil thresholding.
 * **Boundary Extraction:** Gunakan Morphological Gradient untuk mengambil tepi objek.
@@ -131,7 +127,7 @@ blackhat = cv2.morphologyEx(image_binary, cv2.MORPH_BLACKHAT, kernel)
 
 ---
 
-### 🧭 **6. Ringkasan**
+###  **6. Ringkasan**
 
 | Operasi                 | Fungsi Utama                | Efek Visual        |
 | ----------------------- | --------------------------- | ------------------ |
